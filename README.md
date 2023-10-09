@@ -1,4 +1,15 @@
-# KICKS ECONOMY MIDDLE LAYER 
+# BOOKINGS AND RESERVATIONS
+
+This is the repository for a bookings and reservations application.
+
+- Built in Go verion 1.21.1
+- Uses the [chi router](https://github.com/go-chi/chi)
+- Uses [alex edwards SCS](https://github.com/alexedwards/scs/v2) session management
+- Uses [nosurf](https://github.com/justinas/nosurf)
+
+
+
+# KABAN AGILE PROJECT MANAGEMENT
 
 ## 1. BLOCKED (ON HOLD)
 [  ] _{Production Quality System} | {Set Up Digital Ocean} | {Chore}_: As a developer, I want to install Podman on my droplet so deployment is seamless
@@ -61,7 +72,6 @@ When managing user stories in the context of product development or project mana
 * Theme: A collection of related user stories. Themes can be a helpful way to group related stories together, especially when working on larger projects.
 
 * Non-functional Requirements (NFRs): These are requirements that aren't about specific functionalities but instead def
-
 
 
 
