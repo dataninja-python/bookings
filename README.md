@@ -10,36 +10,36 @@ This is the repository for a bookings and reservations application.
 
 # Agile Project Management (KABAN)
 
-## 1. BLOCKED (ON HOLD)
+## 1. Blocked (ON HOLD)
 [  ] _{Production Quality System} | {Set Up Digital Ocean} | {Chore}_: As a developer, I want to install Podman on my droplet so deployment is seamless
 
-## 2. READY (UP NEXT)
+## 2. Ready (UP NEXT)
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 
-## 3. ACTIVE (DOING, IN PROGRESS)
+## 3. Active (DOING, IN PROGRESS)
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 
-## 4. AWAITING REVIEW (IN REVIEW)
+## 4. Awaiting Review (IN REVIEW)
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 
-## 5. TESTING (QA)
+## 5. Testing (QA)
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 
-## 6. DONE (TO PRODUCTION)
+## 6. Done (TO PRODUCTION)
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 
 
-## 7. BACKLOG (MAYBE DO)
+## 7. Backlog (MAYBE DO)
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
