@@ -1,4 +1,4 @@
-# BOOKINGS AND RESERVATIONS
+# Bookings And Reservation Application
 
 This is the repository for a bookings and reservations application.
 
@@ -8,8 +8,7 @@ This is the repository for a bookings and reservations application.
 - Uses [nosurf](https://github.com/justinas/nosurf)
 
 
-
-# KABAN AGILE PROJECT MANAGEMENT
+# Agile Project Management (KABAN)
 
 ## 1. BLOCKED (ON HOLD)
 [  ] _{Production Quality System} | {Set Up Digital Ocean} | {Chore}_: As a developer, I want to install Podman on my droplet so deployment is seamless
