@@ -15,33 +15,45 @@ This is the repository for a bookings and reservations application.
 
 ## 2. Ready (UP NEXT)
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
+
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
+
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 
 ## 3. Active (DOING, IN PROGRESS)
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
+
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
+
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 
 ## 4. Awaiting Review (IN REVIEW)
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
+
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
+
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 
 ## 5. Testing (QA)
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
+
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
+
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 
 ## 6. Done (TO PRODUCTION)
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
+
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
+
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 
 
 ## 7. Backlog (MAYBE DO)
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
+
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
+
 [  ] _{THEME} | {EPIC} | {TYPE}_: As a [type of user], I want [an action] so that [a benefit/value]
 
 
