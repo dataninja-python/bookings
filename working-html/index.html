@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="booking application to show mastery of golang">
+    <meta name="author" content="AJ Igherighe | github.com/dataninja-python/bookings | ShoeGameAllStar">
+    <title>The Page Title</title>
+
+    <!-- css files -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/base.css" rel="stylesheet">
+</head>
+<body>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Rooms
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a href="/rooms/generals-quarters" class="dropdown-item">General's Quarters</a>
+                            <a href="/rooms/majors-suite" class="dropdown-item">Major's Suite</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact" aria-disabled="false">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main page content -->
+    <main class="mt-5">
+
+    <!-- test carousel -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../static/images/woman-laptop.png" alt="woman using laptop">
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>
+                            <span class="bg-dark bg-opacity-75 p-1 mb-1">
+                                Example headline.
+                            </span>
+                        </h1>
+                        <p>
+                            <span class="bg-dark bg-opacity-75 p-1">
+                                Some representative placeholder content for the first slide of the carousel.
+                            </span>
+                        </p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/images/tray.png" alt="tray">
+
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>
+                            <span class="bg-dark bg-opacity-75 p-1 mb-1">
+                                Another example headline.
+                            </span>
+                        </h1>
+                        <p>
+                            <span class="bg-dark bg-opacity-75 p-1">
+                                Some representative placeholder content for the second slide of the carousel.
+                            </span>
+                        </p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/images/outside.png" alt="outside scene">
+
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>
+                            <span class="bg-dark bg-opacity-75 p-1 mb-1">
+                                One more for good measure.
+                            </span>
+                        </h1>
+                        <p>
+                            <span class="bg-dark bg-opacity-75 p-1">
+                                Some representative placeholder content for the third slide of this carousel.
+                            </span>
+                        </p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- page container -->
+    <div class="container">
+        <!-- hero -->
+        <div class="row text-center mt-3">
+            <div class="col">
+                <h1>Welcome to Fort Smythe Bed & Breakfast</h1>
+                <p>
+                    Your home away from home, set on the majestic waters of Atlantic Ocean,
+                    this will be a great vacation.
+                    Your home away from home, set on the majestic waters of Atlantic Ocean,
+                    this will be a great vacation.
+                    Your home away from home, set on the majestic waters of Atlantic Ocean,
+                    this will be a great vacation.
+                    Your home away from home, set on the majestic waters of Atlantic Ocean,
+                    this will be a great vacation.
+                </p>
+            </div>
+        </div>
+
+        <!-- reservation link -->
+        <div class="row">
+            <div class="col text-center">
+                <a href="/make-reservation" class="btn btn-success">Make Reservation Now</a>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+
+    <!-- footer -->
+    <footer class="footer fixed-bottom mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+
+    <!--
+    <footer class="my-footer sticky-bottom text-center">
+            <div class="row">
+                <div class="col">
+                    Left
+                </div>
+                <div class="col">
+                    Middle
+                </div>
+                <div class="col">
+                    Right
+                </div>
+            </div>
+    </footer>-->
+
+    <!-- javascript/typescript files -->
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

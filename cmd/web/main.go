@@ -72,5 +72,6 @@ func main() {
 
 	// execute the servers
 	err = server.ListenAndServe()
+	// fatally log if there is an error
 	log.Fatal(err)
 }

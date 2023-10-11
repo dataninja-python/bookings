@@ -1,0 +1,22 @@
+/* SHARED CUSTOM STYLES
+-------------------------------------------------- */
+/* custom carousel formatting */
+
+.carousel-caption-background-color {
+    display: block;
+    background-color: #163b65;
+    opacity: 55%;
+    width: 45%;
+    margin: 0 auto;
+    height: 1.5em;
+}
+
+/* footer formatting */
+.my-footer {
+    height: 5em;
+    background-color: #163b65;
+    margin-top: 1.5em;
+    padding: 1em;
+    color: white;
+    font-size: 80%;
+}
