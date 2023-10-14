@@ -40,8 +40,46 @@
             <!-- reservation link -->
             <div class="row">
                 <div class="col text-center">
-                    <a id="check-availability-button" href="#!" class="btn btn-success">Check Availability</a>
+                    <a id="check-availability-button" href="#!" class="btn btn-success"
+                       data-bs-toggle="modal" data-bs-target="#exampleModal">Check Availability</a>
                 </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+             data-bs-backdrop="static" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="row" id="reservation-dates-modal">
+                                            <div class="col">
+                                                <input required class="form-control" type="date"
+                                                       name="start" id="start" placeholder="Arrival"/>
+                                            </div>
+                                            <div class="col">
+                                                <input required class="form-control"
+                                                       type="date" name="end" id="end" placeholder="Departure">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Close</button>
+                            <button id="date-submit" type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
 
@@ -50,28 +88,36 @@
 
 {{define "js"}}
     <script>
-        document.getElementById("check-availability-button").addEventListener("click", function () {
+        window.addEventListener("load", () => {
+                document.getElementById("date-submit").addEventListener("click", event => {
+                    let HTMLEvent = event.target;
+                    console.log(HTMLEvent.values)
+                });
+        });
+        /* document.getElementById("check-availability-button").addEventListener("click", function () {
             let html = `
         <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
             <div class="row">
                 <div class="col">
                     <div class="row" id="reservation-dates-modal">
                         <div class="col">
-                            <input disabled required class="form-control" type="text" name="start" id="start" placeholder="Arrival">
+                            <input disabled required class="form-control" type="date"
+                                name="start" id="start" placeholder="Arrival"/>
                         </div>
                         <div class="col">
-                            <input disabled required class="form-control" type="text" name="end" id="end" placeholder="Departure">
+                            <input disabled required class="form-control"
+                                type="date" name="end" id="end" placeholder="Departure">
                         </div>
-
                     </div>
                 </div>
             </div>
+
         </form>
         `;
             attention.custom({
                 title: 'Choose your dates',
                 msg: html,
             });
-        })
+        });*/
     </script>
 {{end}}

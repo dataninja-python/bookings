@@ -1,5 +1,12 @@
 # Bookings And Reservation Application
 
+sources:
+https://sweetalert2.github.io/#input-types
+https://github.com/RickStrahl/datepicker-native/blob/master/README.md
+https://github.com/codeclown/native-datepicker
+https://codepen.io/vsfvjiuv-the-typescripter/pen/mdMeJwL
+
+
 This is the repository for a bookings and reservations application.
 
 - Built in Go verion 1.21.1
