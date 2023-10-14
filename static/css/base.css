@@ -2,6 +2,10 @@
 -------------------------------------------------- */
 /* custom carousel formatting */
 
+.room-image {
+    max-width: 50%;
+}
+
 .carousel-caption-background-color {
     display: block;
     background-color: #163b65;
@@ -29,4 +33,8 @@
 
 .redText {
     color: red;
+}
+
+.datepicker {
+    z-index: 10000;
 }
