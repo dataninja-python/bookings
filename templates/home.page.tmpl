@@ -1,14 +1,133 @@
 {{template "base" .}}
 
 {{define "content"}}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>This is the home page</h1>
-                <p>This is some text</p>
+    <!-- main page content -->
+    <main class="w-100 pb-5 mb-4">
+        <!-- image carousel -->
+        <div id="myCarousel" class="carousel slide w-100 carousel-fade" data-bs-ride="carousel">
 
-                <img src="/static/images/luxedigital-home.jpeg" height="1200" width="2400">
+            <!-- controls the automatic scroll behavior -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img style="width: 100%;" src="../static/images/woman-laptop.png" class="img-fluid
+                    mx-auto d-block carousel-img"
+                         loading="lazy" alt="woman using laptop" srcset="../static/images/woman-laptop10.png 240w,
+                             ../static/images/woman-laptop25.png 600w, ../static/images/woman-laptop33.png 792w,
+                             ../static/images/woman-laptop40.png 960w, ../static/images/woman-laptop50.png 1200w,
+                             ../static/images/woman-laptop60.png 1440w, ../static/images/woman-laptop70.png 1680w,
+                             ../static/images/woman-laptop73.png 1752w, ../static/images/woman-laptop75.png 1800w,
+                             ../static/images/woman-laptop80.png 1920w, ../static/images/woman-laptop90.png 2160w,
+                             ../static/images/woman-laptop.png 2400w">
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>
+                                <span class="bg-dark bg-opacity-75 p-1 mb-1">
+                                    Example headline.
+                                </span>
+                            </h1>
+                            <p>
+                                <span class="bg-dark bg-opacity-75 p-1">
+                                    Some representative placeholder content for the first slide of the carousel.
+                                </span>
+                            </p>
+                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img style="width: 100%;" src="../static/images/tray.png" class="img-fluid"
+                         loading="lazy" alt="tray" srcset="../static/images/tray10.png 240w,
+                         ../static/images/tray25.png 600w, ../static/images/tray33.png 792w,
+                         ../static/images/tray40.png 960w, ../static/images/tray50.png 1200w,
+                         ../static/images/tray60.png 1440w, ../static/images/tray70.png 1680w,
+                         ../static/images/tray73.png 1752w, ../static/images/tray75.png 1800w,
+                         ../static/images/tray80.png 1920w, ../static/images/tray90.png 2160w,
+                         ../static/images/tray.png 2400w">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>
+                                <span class="bg-dark bg-opacity-75 p-1 mb-1">
+                                    Another example headline.
+                                </span>
+                            </h1>
+                            <p>
+                                <span class="bg-dark bg-opacity-75 p-1">
+                                    Some representative placeholder content for the second slide of the carousel.
+                                </span>
+                            </p>
+                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img style="width: 100%;" src="../static/images/outside.png" class="img-fluid"
+                         loading="lazy" alt="outside scene" srcset="../static/images/outside10.png 240w,
+                         ../static/images/outside25.png 600w, ../static/images/outside33.png 792w,
+                         ../static/images/outside40.png 960w, ../static/images/outside50.png 1200w,
+                         ../static/images/outside60.png 1440w, ../static/images/outside70.png 1680w,
+                         ../static/images/outside73.png 1752w, ../static/images/outside75.png 1800w,
+                         ../static/images/outside80.png 1920w, ../static/images/outside90.png 2160w,
+                         ../static/images/outside.png 2400w">
+                    <div class="container">
+                        <div class="carousel-caption text-end">
+                            <h1>
+                                <span class="bg-dark bg-opacity-75 p-1 mb-1">
+                                    One more for good measure.
+                                </span>
+                            </h1>
+                            <p>
+                                <span class="bg-dark bg-opacity-75 p-1">
+                                    Some representative placeholder content for the third slide of this carousel.
+                                </span>
+                            </p>
+                            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- page container -->
+        <div class="container">
+            <!-- hero -->
+            <div class="row text-center mt-3">
+                <div class="col">
+                    <h1>Welcome to Fort Smythe Bed & Breakfast</h1>
+                    <p>
+                        Your home away from home, set on the majestic waters of Atlantic Ocean,
+                        this will be a great vacation.
+                        Your home away from home, set on the majestic waters of Atlantic Ocean,
+                        this will be a great vacation.
+                        Your home away from home, set on the majestic waters of Atlantic Ocean,
+                        this will be a great vacation.
+                        Your home away from home, set on the majestic waters of Atlantic Ocean,
+                        this will be a great vacation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- reservation link -->
+            <div class="row">
+                <div class="col text-center">
+                    <a href="/search-availability" class="btn btn-success">Make Reservation Now</a>
+                </div>
             </div>
         </div>
-    </div>
+        <div id="demo" class="text-center"></div>
+
+    </main>
 {{end}}

@@ -1,0 +1,26 @@
+
+// change something when colorButton is clicked
+document.getElementById("colorButtton").addEventListener("click", () => {
+            // notify("this is my message", "success");
+
+            let html = `
+            <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
+                <div class="row">
+                    <div class="col">
+                        <div class="row" id="reservation-dates-modal">
+                            <div class="col">
+                                <input disabled required type="text" class="form-control" name="start" id="start"
+                                    placeholder="Arrival">
+                            </div>
+                            <div class="col">
+                                <input disabled required type="text" class="form-control" name="end" id="end"
+                                    placeholder="Departure">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            `
+
+            attention.custom({msg: html});
+        });
