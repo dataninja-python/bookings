@@ -64,7 +64,7 @@
                 <div class="col-md-6">
                     <h1 class="mt-5">Search For Availability</h1>
                     <!-- reservation form -->
-                    <form action="reservation.html" method="get" novalidate class="needs-validation">
+                    <form action="reservation.html" method="get">
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
@@ -119,22 +119,6 @@
     <script>
         console.log("Hello, world from javascript!");
 
-        // anonymous function that fires when this script tag loads in the browsesr
-        (() => {
-            // get all the forms we want to apply custom bootstrap validation styles to
-            let forms = document.getElementsByClassName("needs-validation");
-            // loop over the form elements and prevent submission
-            Array.prototype.filter.call(forms, (form) => {
-                form.addEventListener("submit", (event) => {
-                    if(form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add("was-validated");
-                });
-            }, false);
-        })();
-
         document.getElementById("colorButtton").addEventListener("click", () => {
             // textColorVar stores the class we're working with (redText)
             const textColorVar = "redText";
@@ -159,7 +143,6 @@
                 addClass(myElement, textColorVar);
 
         });
-
 
     </script>
 </body>

@@ -26,3 +26,7 @@
     height: auto;
     aspect-ratio: 16/9;
 }
+
+.redText {
+    color: red;
+}
