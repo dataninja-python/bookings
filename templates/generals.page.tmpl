@@ -1,5 +1,77 @@
 {{template "base" .}}
 
 {{define "content"}}
+    <!-- main page content -->
+    <main class="w-100 pb-5 mb-4 mt-2">
 
+        <!-- page container -->
+        <div class="container">
+
+            <!-- image -->
+            <div class="row">
+                <div class="col">
+                    <img src="../static/images/generals-quarters.png" alt="room image" class="img-fluid
+                    mx-auto d-block img-thumbnail room-image"
+                         srcset="../static/images/generals-quarter40.png 640w, ../static/images/generals-quarter50.png 800w,
+                    ../static/images/generals-quarter60.png 960w, ../static/images/generals-quarter70.png 1120w,
+                    ../static/images/generals-quarter80.png 1280w, ../static/images/generals-quarter85.png 1360w,
+                    ../static/images/generals-quarter90.png 1440w, ../static/images/generals-quarter95.png 1520w,
+                    ../static/images/generals-quarters.png 1600w" loading="lazy">
+                </div>
+            </div>
+
+            <!-- hero -->
+            <div class="row text-center mt-3">
+                <div class="col">
+                    <h1>General's Quarters</h1>
+                    <p>
+                        Your home away from home, set on the majestic waters of Atlantic Ocean,
+                        this will be a great vacation.
+                        Your home away from home, set on the majestic waters of Atlantic Ocean,
+                        this will be a great vacation.
+                        Your home away from home, set on the majestic waters of Atlantic Ocean,
+                        this will be a great vacation.
+                        Your home away from home, set on the majestic waters of Atlantic Ocean,
+                        this will be a great vacation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- reservation link -->
+            <div class="row">
+                <div class="col text-center">
+                    <a href="/make-reservation-gq" class="btn btn-success">Check Availability</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+{{end}}
+
+{{define "js"}}
+    <script>
+        document.getElementById("check-availability-button").addEventListener("click", function () {
+            let html = `
+        <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-row" id="reservation-dates-modal">
+                        <div class="col">
+                            <input disabled required class="form-control" type="text" name="start" id="start" placeholder="Arrival">
+                        </div>
+                        <div class="col">
+                            <input disabled required class="form-control" type="text" name="end" id="end" placeholder="Departure">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+        `;
+            attention.custom({
+                title: 'Choose your dates',
+                msg: html,
+            });
+        })
+    </script>
 {{end}}

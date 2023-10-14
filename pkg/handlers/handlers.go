@@ -69,12 +69,6 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
-// Reservation is the handler for the generals quarters room page
-func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
-	pkgAnnouncer()
-	render.RenderTemplate(w, "make-reservation.page.tmpl", &models.TemplateData{})
-}
-
 // Generals is the handler for the generals quarters room page
 func (m *Repository) Generals(w http.ResponseWriter, r *http.Request) {
 	pkgAnnouncer()
@@ -97,4 +91,16 @@ func (m *Repository) Availability(w http.ResponseWriter, r *http.Request) {
 func (m *Repository) Contact(w http.ResponseWriter, r *http.Request) {
 	pkgAnnouncer()
 	render.RenderTemplate(w, "contact.page.tmpl", &models.TemplateData{})
+}
+
+// Reservation is the handler for the reservation page
+func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
+	pkgAnnouncer()
+	render.RenderTemplate(w, "reservation.page.tmpl", &models.TemplateData{})
+}
+
+// Reservation is the handler for the reservation page
+func (m *Repository) MakeReservation(w http.ResponseWriter, r *http.Request) {
+	pkgAnnouncer()
+	render.RenderTemplate(w, "make-reservation.page.tmpl", &models.TemplateData{})
 }
