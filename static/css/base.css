@@ -20,3 +20,9 @@
     color: white;
     font-size: 80%;
 }
+
+.carousel-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
