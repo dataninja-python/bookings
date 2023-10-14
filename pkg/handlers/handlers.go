@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"fmt"
 	"github.com/dataninja-python/bookings/pkg/config"
 	"github.com/dataninja-python/bookings/pkg/models"
 	"github.com/dataninja-python/bookings/pkg/render"
@@ -47,7 +48,7 @@ func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
 	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
 
 	log.Println("Returning rendered home.page.tmpl")
-	render.RenderTemplate(w, "home.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, r, "home.page.tmpl", &models.TemplateData{})
 }
 
 // About is the handler for the about page
@@ -64,7 +65,7 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 
 	log.Println("Returning rendered home.page.tmpl")
 	// render the templates to the browser
-	render.RenderTemplate(w, "about.page.tmpl", &models.TemplateData{
+	render.RenderTemplate(w, r, "about.page.tmpl", &models.TemplateData{
 		StringMap: stringMap,
 	})
 }
@@ -72,35 +73,48 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 // Generals is the handler for the generals quarters room page
 func (m *Repository) Generals(w http.ResponseWriter, r *http.Request) {
 	pkgAnnouncer()
-	render.RenderTemplate(w, "generals.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, r, "generals.page.tmpl", &models.TemplateData{})
 }
 
 // Majors is the handler for the majors suite room page
 func (m *Repository) Majors(w http.ResponseWriter, r *http.Request) {
 	pkgAnnouncer()
-	render.RenderTemplate(w, "majors.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, r, "majors.page.tmpl", &models.TemplateData{})
 }
 
 // Availability is the handler for the majors suite room page
 func (m *Repository) Availability(w http.ResponseWriter, r *http.Request) {
 	pkgAnnouncer()
-	render.RenderTemplate(w, "search-availability.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, r, "search-availability.page.tmpl", &models.TemplateData{})
+}
+
+// PostAvailability is the handler for the majors suite room page
+func (m *Repository) PostAvailability(w http.ResponseWriter, r *http.Request) {
+	pkgAnnouncer()
+	start := r.Form.Get("start")
+	end := r.Form.Get("end")
+
+	_, err := w.Write([]byte(fmt.Sprintf("start date: %s and end date: %s", start, end)))
+	if err != nil {
+		log.Println("Error posting to search availability, ", err)
+		return
+	}
 }
 
 // Contact is the handler for the contact page
 func (m *Repository) Contact(w http.ResponseWriter, r *http.Request) {
 	pkgAnnouncer()
-	render.RenderTemplate(w, "contact.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, r, "contact.page.tmpl", &models.TemplateData{})
 }
 
 // Reservation is the handler for the reservation page
 func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
 	pkgAnnouncer()
-	render.RenderTemplate(w, "reservation.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, r, "reservation.page.tmpl", &models.TemplateData{})
 }
 
 // Reservation is the handler for the reservation page
 func (m *Repository) MakeReservation(w http.ResponseWriter, r *http.Request) {
 	pkgAnnouncer()
-	render.RenderTemplate(w, "make-reservation.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{})
 }

@@ -20,6 +20,8 @@ func routes(app *config.AppConfig) http.Handler {
 	// a personally written middleware
 	mux.Use(WriteToConsole)
 	// CSRF protection
+	//
+	// prevents malicious scripts from being run with authenticated user credentials
 	mux.Use(NoSurf)
 	// manages session interactions
 	mux.Use(SessionLoad)
@@ -32,6 +34,7 @@ func routes(app *config.AppConfig) http.Handler {
 	mux.Get("/majors-suite", handlers.Repo.Majors)
 
 	mux.Get("/search-availability", handlers.Repo.Availability)
+	mux.Post("/search-availability", handlers.Repo.PostAvailability)
 
 	mux.Get("/reservation", handlers.Repo.Reservation)
 	mux.Get("/make-reservation", handlers.Repo.MakeReservation)

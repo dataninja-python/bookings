@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/dataninja-python/bookings/pkg/config"
 	"github.com/dataninja-python/bookings/pkg/models"
+	"github.com/justinas/nosurf"
 	"html/template"
 	"log"
 	"net/http"
@@ -27,9 +28,10 @@ func NewTemplates(a *config.AppConfig) {
 	app = a
 }
 
-func AddDefaultData(td *models.TemplateData) *models.TemplateData {
+func AddDefaultData(td *models.TemplateData, r *http.Request) *models.TemplateData {
 	// log this is in the render package
 	pkgAnnouncer()
+	td.CSRFToken = nosurf.Token(r)
 
 	return td
 }
@@ -38,7 +40,7 @@ func AddDefaultData(td *models.TemplateData) *models.TemplateData {
 //
 // The function combines a base layout template with page specific details
 // The final result is a new specific page presented as a view by the server
-func RenderTemplate(w http.ResponseWriter, tmpl string, td *models.TemplateData) {
+func RenderTemplate(w http.ResponseWriter, r *http.Request, tmpl string, td *models.TemplateData) {
 	// create err variable to hold errors throughout this function
 	var err error
 
@@ -96,7 +98,7 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, td *models.TemplateData)
 	// @why: provides read, write, and other functionality
 	buf := new(bytes.Buffer)
 
-	td = AddDefaultData(td)
+	td = AddDefaultData(td, r)
 
 	// transfer the template to the buffer
 	err = t.Execute(buf, td)
