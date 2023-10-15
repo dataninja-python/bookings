@@ -76,6 +76,19 @@ func (m *Repository) Generals(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "generals.page.tmpl", &models.TemplateData{})
 }
 
+// PostGenerals is the handler for the generals quarters room page
+func (m *Repository) PostGenerals(w http.ResponseWriter, r *http.Request) {
+	pkgAnnouncer()
+	start := r.Form.Get("start")
+	end := r.Form.Get("end")
+
+	_, err := w.Write([]byte(fmt.Sprintf("start date: %s and end date: %s", start, end)))
+	if err != nil {
+		log.Println("Error posting to search availability, ", err)
+		return
+	}
+}
+
 // Majors is the handler for the majors suite room page
 func (m *Repository) Majors(w http.ResponseWriter, r *http.Request) {
 	pkgAnnouncer()

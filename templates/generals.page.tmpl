@@ -41,45 +41,46 @@
             <div class="row">
                 <div class="col text-center">
                     <a id="check-availability-button" href="#!" class="btn btn-success"
-                       data-bs-toggle="modal" data-bs-target="#exampleModal">Check Availability</a>
+                       data-bs-toggle="modal" data-bs-target="#reservationDateModal">Check Availability</a>
                 </div>
             </div>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="reservationDateModal" tabindex="-1" aria-labelledby="reservationDateModalLabel"
              data-bs-backdrop="static" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="row" id="reservation-dates-modal">
-                                            <div class="col">
-                                                <input required class="form-control" type="date"
-                                                       name="start" id="start" placeholder="Arrival"/>
-                                            </div>
-                                            <div class="col">
-                                                <input required class="form-control"
-                                                       type="date" name="end" id="end" placeholder="Departure">
-                                            </div>
-                                        </div>
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="check-availability-form-close">Enter Date</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="/generals-quarters" method="post" novalidate class="needs-validation">
+                        <input hidden="hidden" type="text" name="csrf_token" value="{{.CSRFToken}}">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row" id="reservation-dates-general">
+                                    <div class="col-md-6">
+                                        <label>
+                                            <input required class="form-control" type="date" name="start"
+                                                   placeholder="Arrival">
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>
+                                            <input required class="form-control" type="date" name="end"
+                                                   placeholder="Departure">
+                                        </label>
                                     </div>
                                 </div>
+                            </div>
                         </div>
+                        <hr>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">Close</button>
-                            <button id="date-submit" type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Submit Dates</button>
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
 
@@ -88,11 +89,10 @@
 
 {{define "js"}}
     <script>
-        window.addEventListener("load", () => {
-                document.getElementById("date-submit").addEventListener("click", event => {
-                    let HTMLEvent = event.target;
-                    console.log(HTMLEvent.values)
-                });
+        const elem = document.getElementById('reservation-date-general');
+        const rangePicker = new DateRangePicker(elem, {
+            format: "yyyy-mm-dd",
+            autohide: true,
         });
         /* document.getElementById("check-availability-button").addEventListener("click", function () {
             let html = `
