@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
     main();
 });
-//
+// runs the main function in the file
 var main = function () {
     // 👇️ const input: HTMLInputElement | null
     var input = document.getElementById("start_date");
@@ -19,4 +19,5 @@ var main = function () {
         var outputDisplay = document.getElementById("values");
         outputDisplay.textContent = val;
     };
+    console.log("Hello from the server.");
 };

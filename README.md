@@ -5,6 +5,7 @@ https://sweetalert2.github.io/#input-types
 https://github.com/RickStrahl/datepicker-native/blob/master/README.md
 https://github.com/codeclown/native-datepicker
 https://codepen.io/vsfvjiuv-the-typescripter/pen/mdMeJwL
+https://matiashernandez.dev/blog/post/handling-forms-with-vanilla-javascript
 
 
 This is the repository for a bookings and reservations application.

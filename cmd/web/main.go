@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/alexedwards/scs/v2"
-	"github.com/dataninja-python/bookings/pkg/config"
-	"github.com/dataninja-python/bookings/pkg/handlers"
-	"github.com/dataninja-python/bookings/pkg/render"
+	"github.com/dataninja-python/bookings/internal/config"
+	"github.com/dataninja-python/bookings/internal/handlers"
+	"github.com/dataninja-python/bookings/internal/render"
 	"log"
 	"net/http"
 	"time"

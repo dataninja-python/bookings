@@ -1,10 +1,11 @@
 package handlers
 
 import (
+	"encoding/json"
 	"fmt"
-	"github.com/dataninja-python/bookings/pkg/config"
-	"github.com/dataninja-python/bookings/pkg/models"
-	"github.com/dataninja-python/bookings/pkg/render"
+	"github.com/dataninja-python/bookings/internal/config"
+	"github.com/dataninja-python/bookings/internal/models"
+	"github.com/dataninja-python/bookings/internal/render"
 	"log"
 	"net/http"
 )
@@ -110,6 +111,33 @@ func (m *Repository) PostAvailability(w http.ResponseWriter, r *http.Request) {
 	_, err := w.Write([]byte(fmt.Sprintf("start date: %s and end date: %s", start, end)))
 	if err != nil {
 		log.Println("Error posting to search availability, ", err)
+		return
+	}
+}
+
+// jsonResponse type is used to test marshalling and unmarshalling required by go to manage json
+type jsonResponse struct {
+	OK      bool   `json:"ok"`
+	Message string `json:"message"`
+}
+
+// AvailabilityJSON handles request for availability and sends JSON response
+func (m *Repository) AvailabilityJSON(w http.ResponseWriter, r *http.Request) {
+	resp := jsonResponse{
+		OK:      true,
+		Message: "Available!",
+	}
+
+	out, err := json.MarshalIndent(resp, "", "     ")
+	if err != nil {
+		log.Println(err)
+	}
+
+	log.Println(string(out))
+
+	w.Header().Set("Content-Type", "application/json")
+	_, err = w.Write(out)
+	if err != nil {
 		return
 	}
 }

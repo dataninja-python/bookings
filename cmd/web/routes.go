@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/dataninja-python/bookings/pkg/config"
-	"github.com/dataninja-python/bookings/pkg/handlers"
+	"github.com/dataninja-python/bookings/internal/config"
+	"github.com/dataninja-python/bookings/internal/handlers"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"net/http"
@@ -36,6 +36,7 @@ func routes(app *config.AppConfig) http.Handler {
 
 	mux.Get("/search-availability", handlers.Repo.Availability)
 	mux.Post("/search-availability", handlers.Repo.PostAvailability)
+	mux.Get("/search-availability-json", handlers.Repo.AvailabilityJSON)
 
 	mux.Get("/reservation", handlers.Repo.Reservation)
 	mux.Get("/make-reservation", handlers.Repo.MakeReservation)

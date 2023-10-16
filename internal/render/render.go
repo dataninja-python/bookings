@@ -3,8 +3,8 @@ package render
 import (
 	"bytes"
 	"fmt"
-	"github.com/dataninja-python/bookings/pkg/config"
-	"github.com/dataninja-python/bookings/pkg/models"
+	"github.com/dataninja-python/bookings/internal/config"
+	"github.com/dataninja-python/bookings/internal/models"
 	"github.com/justinas/nosurf"
 	"html/template"
 	"log"

@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
     main()
 })
 
-//
+// runs the main function in the file
 const main = () => {
     // 👇️ const input: HTMLInputElement | null
     const input = document.getElementById("start_date") as HTMLInputElement | null;
@@ -24,4 +24,6 @@ const main = () => {
         let outputDisplay = document.getElementById("values");
         outputDisplay.textContent = val;
     }
-}
+
+    console.log("Hello from the server.")
+};

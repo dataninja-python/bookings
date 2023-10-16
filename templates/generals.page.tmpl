@@ -54,8 +54,11 @@
                         <h1 class="modal-title fs-5" id="check-availability-form-close">Enter Date</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <form action="/generals-quarters" method="post" novalidate class="needs-validation">
-                        <input hidden="hidden" type="text" name="csrf_token" value="{{.CSRFToken}}">
+                    <form id="form-modal-general" action="/generals-quarters" method="post"
+                          novalidate class="needs-validation">
+                        <label>
+                            <input hidden="hidden" type="text" name="csrf_token" value="{{.CSRFToken}}">
+                        </label>
                         <div class="row">
                             <div class="col">
                                 <div class="row" id="reservation-dates-general">
@@ -83,17 +86,23 @@
                 </div>
             </div>
         </div>
-
     </main>
 {{end}}
 
 {{define "js"}}
+    <script src="../static/js/generals.js"></script>
     <script>
         const elem = document.getElementById('reservation-date-general');
         const rangePicker = new DateRangePicker(elem, {
             format: "yyyy-mm-dd",
             autohide: true,
         });
+
+        const modalForm = document.getElementById("form-modal-general");
+        modalForm.addEventListener("submit", onFormSubmit);
+        const handleFormSubmission = (HTMLEvent) => {
+
+        }
         /* document.getElementById("check-availability-button").addEventListener("click", function () {
             let html = `
         <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
